@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Ball/Ball Container.gd" type="Script" id=1]
+[ext_resource path="res://Paddle/Paddle Container.gd" type="Script" id=2]
+[ext_resource path="res://Brick/Brick Container.gd" type="Script" id=3]
+[ext_resource path="res://Score/Score.gd" type="Script" id=4]
+[ext_resource path="res://Assets/BrickBreakV.2.ogg" type="AudioStream" id=5]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Walls"]
+polygon = PoolVector2Array( 1, -3, 3, 601, -83, 602, -79, -97, 1098, -90, 1093, 594, 1026, 596, 1021, -4 )
+
+[node name="Paddle Container" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Ball Container" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="Brick Container" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Score" type="Label" parent="."]
+margin_right = 120.0
+margin_bottom = 27.0
+text = "Score:0"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
