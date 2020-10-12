@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BrickBreakV.2.ogg-e9b122fed43207c8d2a864505f833512.oggstr"
+
+[deps]
+
+source_file="res://Assets/BrickBreakV.2.ogg"
+dest_files=[ "res://.import/BrickBreakV.2.ogg-e9b122fed43207c8d2a864505f833512.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
